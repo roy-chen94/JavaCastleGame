@@ -5,11 +5,9 @@ This project is the homework for ZJU MOOC "Java OOP"（《面向对象程序设�
 
 ## Rules / 游戏规则
 
-Starting from outside, you can discover the rooms using "go" command. There is a chest in every room. Using "search" command, you have a certain 
-chance to find the chest. Collect all the chests and finish the game!
+There is a chest in every room. Starting from outside, you can discover all the rooms using "go" command. Using "search" command, you have a certain chance to find a chest in each room. Collect all the chests and finish the game!
 
-从城堡外出发，用“go”命令进入各个房间（其中城堡外还有两个被称为“up”和“down”的“任意门”，可以进入任何一个房间，这两个门的内容也是本周的作业内容），
-每个房间都有一个宝箱，在各个房间内使用search命令，有一定几率得到宝箱。收集完所有的宝箱后游戏完成并退出。
+从城堡外出发，用“go”命令进入各个房间（其中城堡外还有两个被称为“up”和“down”的“任意门”，可以进入任何一个房间，这两个门的内容也是本周的作业内容），每个房间都有一个宝箱，在各个房间内使用search命令，有一定几率得到宝箱。收集完所有的宝箱后游戏完成并退出。
 
 ## Commands / 命令
 
@@ -33,6 +31,6 @@ bye: Exit the game. (Your game process will not be saved.)
 
 bye：退出游戏。（你的游戏进度不会被保存。）
 
-**(hidden) cgprob < probability >: Change the probability of finding a chest. (Default value is 0.2. This command is not displayed in the "help" information.)
+*(hidden) cgprob < probability >: Change the probability of finding a chest. (Default value is 0.2. This command is not displayed in the "help" information.)
 
-**（隐藏）cgprob <概率>: 改变发现宝箱的概率（默认为0.2。该命令不显示在help信息中。）
+*（隐藏）cgprob < 概率 >: 改变发现宝箱的概率（默认为0.2。该命令不显示在help信息中。）
