@@ -11,9 +11,9 @@ There is a chest in every room. Starting from outside, you can discover all the 
 
 ## Commands / 命令
 
-go < direction >: Enter the room in this direction.
+go < direction >: Enter the room in this direction. (e.g. go west) 
 
-go <方向>: 进入这个方向的房间。
+go <方向>: 进入这个方向的房间。（例如：go west）
 
 search: Try to search for a chest in current room.
 
@@ -31,6 +31,6 @@ bye: Exit the game. (Your game process will not be saved.)
 
 bye：退出游戏。（你的游戏进度不会被保存。）
 
-*(hidden) cgprob < probability >: Change the probability of finding a chest. (Default value is 0.2. This command is not displayed in the "help" information.)
+*(hidden) cgprob < probability >: Change the probability of finding a chest. (e.g. cgprob 0.5) (Default value is 0.2. This command is not displayed in the "help" information.)
 
-*（隐藏）cgprob < 概率 >: 改变发现宝箱的概率（默认为0.2。该命令不显示在help信息中。）
+*（隐藏）cgprob < 概率 >: 改变发现宝箱的概率。 (例如：cgprob 0.5)（默认为0.2。该命令不显示在help信息中。）
