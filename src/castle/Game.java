@@ -14,12 +14,64 @@ public class Game {
         
     public Game() 
     {
-    	handlers.put("go", new Handlergo(this));
-    	handlers.put("help",new Handlerhelp(this));
-    	handlers.put("bye",new Handlerbye(this));
-    	handlers.put("search", new Handlersearch(this));
-    	handlers.put("show", new Handlershow(this));
-    	handlers.put("cgprob", new Handlercgprob(this));
+    	handlers.put("go", new Handler() {
+			@Override
+			public void doCmd(String cmd) {
+				// TODO Auto-generated method stub
+				goRoom(cmd);
+			}
+    		
+    	});
+    	
+    	handlers.put("help",new Handler() {
+    		@Override
+    		public void doCmd(String cmd) {
+    			// TODO Auto-generated method stub
+    			ArrayList<String> handlers = getHandlers();
+    			System.out.print("迷路了吗？你可以做的命令有：");
+    			for (String s : handlers) {
+    				if (!s.equals("cgprob")) System.out.print(s + " ");
+    			}
+    	        System.out.println("如：\tgo east");
+    		}
+    	});
+    	
+    	handlers.put("bye",new Handler(){
+    		@Override
+    		public boolean bye() {
+    			// TODO Auto-generated method stub
+    			return true;
+    		}
+    	});
+    	
+    	handlers.put("search", new Handler() {
+    		@Override
+    		public void doCmd(String cmd) {
+    			// TODO Auto-generated method stub
+    				findChest();
+    			} 
+    	});
+    	
+    	handlers.put("show", new Handler() {
+    		@Override
+    		public void doCmd(String cmd) {
+    			// TODO Auto-generated method stub
+    			showRoomInfo();
+    		}
+    	});
+    	
+    	handlers.put("cgprob", new Handler() {
+    		public void doCmd(String cmd) {
+    			// TODO Auto-generated method stub
+    			try {
+    			   changeProb(Double.parseDouble(cmd));
+    			} catch(NumberFormatException e) {
+    				System.out.println("无效的概率输入");
+    			}
+    				
+    		}
+    	});
+    	
         createRooms();
     }
 

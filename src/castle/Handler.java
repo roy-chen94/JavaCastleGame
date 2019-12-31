@@ -1,12 +1,10 @@
 package castle;
 
 public class Handler { 
-	protected Game game;
-	
-	public Handler(Game game) {
-		this.game = game;
+		
+	public Handler() {
+		// TODO Auto-generated constructor stub
 	}
-	
 
 	public boolean bye() {
 		return false;
